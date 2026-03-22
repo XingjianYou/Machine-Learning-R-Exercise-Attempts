@@ -2,14 +2,13 @@
 
 My personal attempts at the end-of-chapter exercises in Prof. Qiang Chen's textbook *Machine Learning and R Applications* (《机器学习及R应用》), completed in RStudio. Code starts from Chapter 4, as the earlier chapters are concept-only.
 
-> These are my own attempts and may contain errors. Use as reference only.
+> These are my own attempts completed in January 2021 and may contain errors. The textbook may have been updated since then. Use as reference only.
 
 ## Structure
 
 ```
-code/
-  zh/   — original R scripts with Chinese comments and variable names
-  en/   — translated R scripts with English comments and variable names
+scripts-zh/   — original R scripts with Chinese comments and variable names
+scripts-en/   — translated R scripts with English comments and variable names
 ```
 
 ## Chapter Index
@@ -38,14 +37,13 @@ code/
 
 陈强老师《机器学习及R应用》各章习题的个人解答，用 RStudio 完成。由于前几章主要是概念介绍，从第四章开始放上代码。学习此书时发现网上暂无相关资料，故将个人解答分享至 GitHub，仅供参考。
 
-> 以下为本人习题解答，仅供参考。
+> 以下为本人于2021年1月完成的习题解答，不保证完全正确，且书本可能已更新。仅供参考。
 
 ## 文件结构
 
 ```
-code/
-  zh/   — 原版 R 脚本，中文注释与变量名
-  en/   — 英文翻译版 R 脚本
+scripts-zh/   — 原版 R 脚本，中文注释与变量名
+scripts-en/   — 英文翻译版 R 脚本
 ```
 
 ## 章节目录
