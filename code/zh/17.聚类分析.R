@@ -44,11 +44,11 @@ plot(hc.average,main = "Average Linkage",cex=0.9,xlab="",sub="")
 hc.single <- hclust(dist(faithful),method = "single")
 plot(hc.single,main = "Single Linkage",cex=0.9,xlab="",sub="")
 #（4）使用中心连接并画树状图
-hc.complete <- hclust(dist(faithful),method = "centroid")
+hc.centroid <- hclust(dist(faithful),method = "centroid")
 plot(hc.centroid,main = "Centroid Linkage",cex=0.9,xlab="",sub="")
 #（5）通过树状图判断哪种连接方式最糟糕
 #我觉得是single linkage
 #（6）对于完全连接，假设K=2，用散点图展示聚类结果
-fit <- cutree(hc.complete, k=3)
+fit <- cutree(hc.complete, k=2)
 plot(faithful,col=fit,main="Data of Old Faithful Geyser")
 par(mar=c(5,5,5,5))

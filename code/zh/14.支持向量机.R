@@ -39,7 +39,7 @@ table <- table(Predicted=pred, Actual=test$V44)
 (test_error <- 1-sum(diag(table))/sum(table))
 
 #（6）通过测试集的预测准确率，选择线性核最优成本参数cost，并画图展示
-test.out <- tune(svm,V44~.,data=train,validation.x=test[,-"V44"],validation.y=test[,"V44"],kernel="linear",ranges=list(cost=c(0.001,0.01,0.1,1,5,10,100)))
+test.out <- tune(svm,V44~.,data=train,validation.x=test[,names(test)!="V44"],validation.y=test[,"V44"],kernel="linear",ranges=list(cost=c(0.001,0.01,0.1,1,5,10,100)))
 test.out
 plot(test.out,xlab = "C",ylab = "Test Error",main = "Test Error of Test Dataset")
 

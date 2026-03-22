@@ -79,5 +79,6 @@ y.test <- test[,"credit_riskbad"]
 (error_rate <- 1-sum(diag(table))/sum(table))
 
 prob <- predict(fit,newdata=test,n.trees=855,type="response")
+pred <- prob > 0.5
 (table <- table(pred, y.test))
 (error_rate <- 1-sum(diag(table))/sum(table))

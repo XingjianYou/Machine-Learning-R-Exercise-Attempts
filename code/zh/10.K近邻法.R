@@ -12,7 +12,6 @@ head(PimaIndiansDiabetes)
 attach(PimaIndiansDiabetes)
 table(diabetes)
 prop.table(table(diabetes))
-test_label <- PimaIndiansDiabetes[-train_index,]$diabetes
 
 #（2）画箱线图
 boxplot(mass~diabetes,main='Boxplot for mass')
@@ -24,8 +23,9 @@ apply(pidz,2,sd)
 
 #（4）划分测试集，用K=10估计
 train_index <- sample(768,768-200)
-train <- sample(pidz[train_index,])
-test <- sample(pidz[-train_index,])
+test_label <- PimaIndiansDiabetes[-train_index,]$diabetes
+train <- pidz[train_index,]
+test <- pidz[-train_index,]
 pred <- knn(train = train, test = test, cl = PimaIndiansDiabetes[train_index,]$diabetes, k=10, prob=TRUE)
 
 #（5）预测并且展示混淆矩阵

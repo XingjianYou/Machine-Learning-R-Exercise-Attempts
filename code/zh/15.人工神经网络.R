@@ -6,11 +6,9 @@ rm(list=ls())
 setwd("/Users/Antony/OneDrive/CoreTech/ML&R/MLR_Data")
 library(AppliedPredictiveModeling)
 data("abalone")
-model.matrix(ablone$Tpye,data = abalone)
 summary(abalone)
 dummy <- model.matrix(~Type,data=abalone)
 aba_data <- cbind(abalone[,-1],dummy[,-1])
-y.test <- abalone[-train_index,"Rings"]
 
 #（2）数据预处理，所有变量进行归一化处理
 maxs <- apply(aba_data,2,max)
@@ -20,6 +18,7 @@ aba_s <- as.data.frame(scale(aba_data,center = mins,scale=maxs-mins))
 #（3）选取1000个变量作为训练集
 set.seed(1)
 train_index <- sample(4177,1000)
+y.test <- abalone[-train_index,"Rings"]
 train <- aba_s[train_index,]
 test <- aba_s[-train_index,]
 fit <- neuralnet(Rings~.,data = train,hidden = 3,act.fct = "logistic")
