@@ -37,7 +37,7 @@ scripts-en/   — translated R scripts with English comments and variable names
 
 陈强老师《机器学习及R应用》各章习题的个人解答。由于前几章主要是概念介绍，从第四章开始放上代码。
 
-> 以下为本人于2021年1月完成的习题解答，仅供参考。
+> 以下为本人于2021年1月完成的习题，仅供参考。
 
 ## 文件结构
 
